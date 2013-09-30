@@ -21,12 +21,12 @@ main = do
     let pbs' = map (\pb->(fromIntegral (tick pb), open pb,high pb,low pb,close pb)) pbs
     displayCallback $= display pbs' n 0.8
 
-    let left   = (-2)::Double
-    let right  =   2 ::Double
-    let bottom =   2 ::Double
-    let top    =   2 ::Double
-    let near   =   0 ::Double
-    let far    =   1 ::Double
+    let left   = (-2)::GLdouble
+    let right  =   2 ::GLdouble
+    let bottom =   2 ::GLdouble
+    let top    =   2 ::GLdouble
+    let near   =   0 ::GLdouble
+    let far    =   1 ::GLdouble
     matrixMode $= Projection
     ortho left right bottom top near far
     matrixMode $= Modelview 0
