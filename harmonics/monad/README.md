@@ -4,8 +4,10 @@ Refer to README in root of repository for explanation of the project concept.
 
 This was the first attempt, using `State` monads to track peaks and valleys and to record the work-in-progress of matching patterns.
 
-Build with `cabal build`. **NOTE:** The unit test command lines from the makefile must 
-be run manually because they are not integrated into cabal yet. 
+Build and run unit tests with:
+* `cabal configure --enable-tests`
+* `cabal build`
+* `cabal test`
 
 Two programs are built:
 * monadic-matcher
