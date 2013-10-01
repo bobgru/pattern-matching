@@ -5,8 +5,8 @@ Description:
   Two Haskell programs that demonstrate pattern matcher by
   way of a monadic pipeline. Price bars feed the extrema
   matcher, which in turn feeds the pattern matcher. The
-  program SampleApp counts the patterns and has not been
-  tuned to exclude any. The SampleGraphApp program simply
+  program monadic-matcher counts the patterns and has not been
+  tuned to exclude any. The monadic-viewer program simply
   displays a naked price chart--no axes, labels or patterns.
 License:        BSD3
 Build-Type:     Simple
@@ -14,10 +14,25 @@ Author:         Bob Grudem
 Maintainer:     bobgru@hotmail.com
 Cabal-Version:  >= 1.2
 
-Executable SampleApp
+Executable monadic-matcher
   Build-Depends:  base, OpenGL, parsec, mtl
   Main-Is:        SampleApp.hs
 
-Executable SampleGraphApp
+Executable monadic-viewer
   Build-Depends:  base, OpenGL, GLUT, parsec, mtl
   Main-Is:        SampleGraphApp.hs
+
+Test-Suite price-bar-tests
+  Type:           exitcode-stdio-1.0
+  Main-Is:        PriceBarTests.hs
+  Build-Depends:  base
+
+Test-Suite extremum-matcher-tests
+  Type:           exitcode-stdio-1.0
+  Main-Is:        ExtremumMatcherTests.hs
+  Build-Depends:  base
+
+Test-Suite pattern-matcher-tests
+  Type:           exitcode-stdio-1.0
+  Main-Is:        PatternMatcherTests.hs
+  Build-Depends:  base

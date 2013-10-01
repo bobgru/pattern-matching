@@ -1,14 +1,17 @@
+module Main where
 import ExtremumMatcher
 import PriceBar
 import TestFramework
 import Control.Monad
+import System.Exit (exitFailure, exitSuccess)
 
 main = do
-    let testResults = runTests pureTests
-    putStrLn testResults
-    
-    ioTestResults <- runTestsIO ioTests
-    putStrLn ioTestResults
+    let (details, summary) = runTests pureTests
+    putStrLn details
+    (ioDetails, ioSummary) <- runTestsIO ioTests
+    putStrLn ioDetails
+
+    if not (summary && ioSummary) then exitFailure else exitSuccess
 
 
 pureTests = [

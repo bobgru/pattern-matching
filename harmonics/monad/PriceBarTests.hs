@@ -1,7 +1,13 @@
+module Main where
 import PriceBar
 import TestFramework
+import System.Exit (exitFailure, exitSuccess)
 
-main = putStrLn (runTests tests)
+main = do
+    let (details, summary) = runTests tests
+    putStrLn details
+    if not summary then exitFailure else exitSuccess
+
 
 tests = [
       ("successTest", successTest)
