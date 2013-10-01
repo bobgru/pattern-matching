@@ -1,3 +1,4 @@
+{-# LANGUAGE DoAndIfThenElse #-}
 module CandleStick (candlestick, candlestickColor) where
 import Graphics.Rendering.OpenGL
 import Graphics.UI.GLUT
