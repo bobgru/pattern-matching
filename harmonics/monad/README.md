@@ -18,7 +18,8 @@ Two programs are built:
     + Uses OpenGL to draw price bars as candlesticks--not matched patterns
     + run with `dist/build/monadic-viewer/monadic-viewer 200` where the 200 is the number of price bars to use
 
-**NOTE:** The programs must be run from the _monad_ directory in order to find their datasource because
+**NOTE:** The programs must be run from the directory containing the source 
+code in order to find their datasource because
 currently it is hardcoded to be a file in the ../../data directory. Various other parameters are also hardcoded.
 
 Its original purpose is no longer relevant, but I may still work on it for practice. There are countless ways to improve it.

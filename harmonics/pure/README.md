@@ -19,7 +19,8 @@ Two programs are built:
     + Uses OpenGL to draw price bars as candlesticks, and matched patterns
     + run with `dist/build/pure-viewer/pure-viewer 400` where the 400 is the number of price bars to use
 
-**NOTE:** The programs must be run from the _pure_ directory in order to find their datasource because
+**NOTE:** The programs must be run from the directory containing the source
+code in order to find their datasource because
 currently it is hardcoded to be a file in the ../../data directory. Various other parameters are also hardcoded.
 
 To view the documentation, open the files
