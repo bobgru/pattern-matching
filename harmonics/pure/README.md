@@ -4,10 +4,11 @@ Refer to README in root of repository for explanation of the project concept.
 
 This was the second attempt, using filters to isolate peaks and valleys and to match patterns.
 
-Build and run unit tests with:
+Build, run unit tests, and create documentation with:
 * `cabal configure --enable-tests`
 * `cabal build`
 * `cabal test`
+* `cabal haddock --executables`
 
 Two programs are built:
 * pure-matcher
@@ -20,5 +21,9 @@ Two programs are built:
 
 **NOTE:** The programs must be run from the _pure_ directory in order to find their datasource because
 currently it is hardcoded to be a file in the ../../data directory. Various other parameters are also hardcoded.
+
+To view the documentation, open the files
+`dist/doc/html/pure-matcher/pure-viewer/index.html` or
+`dist/doc/html/pure-matcher/pure-matcher/index.html`.
 
 Its original purpose is no longer relevant, but I may still work on it for practice. There are countless ways to improve it.
