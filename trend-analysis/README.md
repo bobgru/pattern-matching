@@ -17,5 +17,7 @@ One program is built:
     + run with `dist/build/trend-analyzer/trend-analyzer`
     + run with `--help` to see options
 
+To see the documentation, open in a browser the file `dist/doc/html/trend-analyzer/trend-analyzer/index.html`.
+
 **NOTE:** The program must be run from the _trend-analyzer_ directory in order to find its default datasource because
 currently it is hardcoded to be a file in the ../data directory. Various other parameters are also hardcoded.
