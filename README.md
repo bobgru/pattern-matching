@@ -29,7 +29,8 @@ significant "harmonic" ratios to consider, that you will see whatever you want t
 The artifacts of this project are a few Haskell programs that analyze price data, none of which got
 any review for accuracy beyond my unit tests. I first tried a monadic pipeline that ran so slowly
 I abandoned it. Next I did what amounts to a filter that performed much better, starting with a
-simple "trend analysis" I read about in a book, then with the harmonic patterns.
+simple "trend analysis" I read about in a book, then with the harmonic patterns. The trend analysis
+simulation also modeled a brokerage account with automated trades.
 
 ###What's Next
 It was fun. I learned some Haskell basics. At ICFP 2013 I was encouraged to post the code
