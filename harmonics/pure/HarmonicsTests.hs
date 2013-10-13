@@ -165,14 +165,14 @@ pipsDiff_inverted   = assertAreEqual    30      (pipsDiff exB' exC)
 timeDiff_forward    = assertAreEqual 100 (timeDiff pbA' pbB')
 timeDiff_backward   = assertAreEqual 100 (timeDiff pbB' pbA')
 
-equalWithin_no_low    = assertAreEqual False (equalWithin eps  90 100)
-equalWithin_no_high   = assertAreEqual False (equalWithin eps 110 100)
+equalWithin_no_low    = assertAreEqual False (equalWithin eps  89 100)
+equalWithin_no_high   = assertAreEqual False (equalWithin eps 111 100)
 equalWithin_yes_low   = assertAreEqual True  (equalWithin eps  91 100)
 equalWithin_yes_high  = assertAreEqual True  (equalWithin eps 109 100)
 equalWithin_error_1   = assertAreEqual False (equalWithin eps 111 0.09)
 
-closeToOneOf_none  = assertAreEqual False (closeToOneOf  45 [50, 100, 200] eps)
-closeToOneOf_one_1 = assertAreEqual True  (closeToOneOf  46 [50, 100, 200] eps)
+closeToOneOf_none  = assertAreEqual False (closeToOneOf  44 [50, 100, 200] eps)
+closeToOneOf_one_1 = assertAreEqual True  (closeToOneOf  45 [50, 100, 200] eps)
 closeToOneOf_one_2 = assertAreEqual True  (closeToOneOf  91 [50, 100, 200] eps)
 closeToOneOf_one_3 = assertAreEqual True  (closeToOneOf 181 [50, 100, 200] eps)
 

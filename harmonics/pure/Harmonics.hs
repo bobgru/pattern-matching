@@ -46,7 +46,7 @@ timeDiff a b
 -- It is an error for the goal to be less than the tolerance.
 equalWithin :: (Ord a, Fractional a, Show a) => a -> a -> a -> Bool
 equalWithin eps testVal goal
-    | goal > eps   =  abs (testVal - goal) / goal < eps
+    | goal > eps   =  abs (testVal - goal) / goal <= eps
     | otherwise =  error msg
     where msg = "equalWithin: goal (" ++ show goal ++ ")" 
                 ++ " is less than tolerance (" ++ show eps ++ ")"
