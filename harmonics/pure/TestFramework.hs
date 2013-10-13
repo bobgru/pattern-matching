@@ -10,23 +10,23 @@ type Test = (String, (Bool, String))
 type TestIO = (String, IO (Bool, String))
 type TestResult = (String, Bool, String)
 
-runTests :: [Test] -> String
-runTests [] = ""
+runTests :: [Test] -> (String, Bool)
+runTests [] = ("", True)
 runTests tests =
     let results = map runTest tests
         details = map formatDetails results
         summary = all snd3 results
         result = unlines details ++ newLine ++ showResult summary
-    in result
+    in (result, summary)
 
-runTestsIO :: [TestIO] -> IO String
-runTestsIO [] = return ""
+runTestsIO :: [TestIO] -> IO (String, Bool)
+runTestsIO [] = return ("", True)
 runTestsIO tests = do
     results <- mapM runTestIO tests
     let details = map formatDetails results
     let summary = all snd3 results
     let result = unlines details ++ newLine ++ showResult summary 
-    return result
+    return (result, summary)
 
 runTest :: Test -> TestResult
 runTest t = (fst t, (fst . snd) t, (snd . snd) t)
