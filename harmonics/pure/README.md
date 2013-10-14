@@ -3,6 +3,8 @@
 Refer to README in root of repository for explanation of the project concept.
 
 This was the second attempt, using filters to isolate peaks and valleys and to match patterns.
+In this design, patterns are matched against the set of pricebars without regard to new data
+arriving.
 
 Build, run unit tests, and create documentation with:
 * `cabal configure --enable-tests`
